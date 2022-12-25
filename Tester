@@ -1,0 +1,48 @@
+public class RightTimingTester
+{
+    public static void main(String args[]){
+        //CONSTRUCTING 3 OBJECTS
+        RightTiming runner1 = new RightTiming("Matthew", "15:45", 10, 3.1, false);
+        RightTiming runner2 = new RightTiming("Scott", "17:38", 89, 3.1, true);
+        RightTiming runner3 = new RightTiming("Steve", "34:32", 7, 6.2, false);
+        
+        //CALL TOSTRING ON ALL OBJECTS WITH SPACING
+        System.out.println(runner1);
+        System.out.println();
+        System.out.println(runner2);
+        System.out.println();
+        System.out.println(runner3);
+        System.out.println();
+        
+        //USING TWO SETTERS TO CHANGE TWO INSTANCE VARIABLES IN SAME OBJECT
+        runner2.setPlace(87);
+        runner2.setFirstRace(false);
+        //PRINTING THESE NEW VARIABLES
+        System.out.println(runner2.getName() + "s new place is: " + runner2.getPlace());
+        System.out.println(runner2.getName() + "s first race now?: " + runner2.getFirstRace());
+        System.out.println();
+        
+        //CALLING ALL COMPLEX METHODS ON ALL OBJECTS
+        //PACE METHOD
+        System.out.println(runner1.getName()+ " pace: " + runner1.pace());
+        System.out.println(runner2.getName()+ " pace: " + runner2.pace());
+        System.out.println(runner3.getName()+ " pace: "+ runner3.pace());
+        System.out.println();
+        
+        //QUALIFIED METHOD
+        System.out.println("Did " + runner1.getName() + " qualify: " + runner1.qualified(100));
+        System.out.println("Did " + runner2.getName() + " qualify: " + runner2.qualified(102));
+        System.out.println("Did " + runner3.getName() + " qualify: " + runner3.qualified(99));
+        System.out.println();
+        
+        //DISQUALIFIED METHOD
+        runner1.disqualified();
+        runner2.disqualified();
+        runner3.disqualified();
+        System.out.println(runner1);
+        System.out.println();
+        System.out.println(runner2);
+        System.out.println();
+        System.out.println(runner3);
+    }
+}
